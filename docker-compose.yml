@@ -1,0 +1,17 @@
+
+services:
+  db: # Nombre del servicio de la base de datos
+    image: postgres:16-alpine # Imagen de PostgreSQL (versión 16, ligera)
+    container_name: clientes-postgres # Nombre opcional para el contenedor
+    restart: always # Asegura que el contenedor se reinicie si falla
+    environment: # Variables de entorno para configurar PostgreSQL
+      POSTGRES_DB: clientes_db # Nombre de la base de datos
+      POSTGRES_USER: user # Usuario de la base de datos
+      POSTGRES_PASSWORD: password # Contraseña del usuario
+    ports:
+      - "5432:5432" # Mapea el puerto 5432 del host al puerto 5432 del contenedor
+    volumes: # Persistencia de datos
+      - db_data:/var/lib/postgresql/data # Mapea un volumen persistente para los datos de la DB
+
+volumes:
+  db_data: # Definición del volumen persistente
