@@ -54,7 +54,7 @@ Asegúrate de tener instalado lo siguiente:
 ### 1. Clonar el Repositorio
 
 ```aiignore
-git clone <URL_DEL_REPOSITORIO>
+git clone https://github.com/josephabreu01/oriontek-java-test
 cd <Carpeta donde bajaste el repositorio>
 ```
 ### 2. Configuración y Arranque de la Base de Datos con Docker Compose
